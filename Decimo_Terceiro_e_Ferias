@@ -1,0 +1,21 @@
+# faça um programa em python que leia os 12 meses de salarios recebidos por um funcionário durante um ano, calculee exiba na tela quanto ele receberá de 13 salário e 1/3 de férias:
+# para os cáuculos ,ultilize as seguintes definições:
+
+# soma-se todos os salarios e divide por 12 para dar média
+# ferias = média dos salários * 1/3
+
+meses = ["Jan", "Fev", "Març", "Abril", "Maio",
+         "Jun", "Julh", "Agos", "Set", "Out", "Nov", "Dez"]
+salarios = []
+soma = 0
+
+for i in range(12):
+    sal = float(input("Qual o salario de %s R$" %
+                (meses[i])))  # Float para decimal
+    salarios.append(sal)  # [i] pega o indice da variavel que esta nomeada
+    soma = soma + salarios[i]
+
+media = soma/len(meses)  # len -> qtdade de itens da lista
+print("13° salario R$", media)
+ferias = media*1/3
+print("Ferias R$", ferias)
